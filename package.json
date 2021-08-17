@@ -2,6 +2,7 @@
   "name": "goit-react-hw-06-phonebook",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://looopy19.github.io/goit-react-hw-06-phonebook",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -27,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +53,9 @@
   "devDependencies": {
     "modern-normalize": "^1.1.0",
     "prop-types": "^15.7.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }
